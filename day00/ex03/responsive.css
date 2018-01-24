@@ -1,0 +1,69 @@
+body{
+	 font-family:"Arial";
+	 background-image: url("http://www.larousse.fr/encyclopedie/data/images/1310399-Dmitri_Ivanovitch_Mendele%C3%AFev.jpg")
+}
+table{
+	width:100%;
+	height:100%;
+}
+td{
+	border:2px solid black;
+	position:relative;
+}
+h2{
+	color:blue;
+	font-size:1.5vw;
+	text-align:center
+}
+p{
+	font-size:1vw;
+}
+.void{
+	border:none;
+}
+.green{
+	background:#A0FFA0;
+}
+.blue{
+	background:#C0E8FF;
+}
+.red{
+	background:#FF6666;
+}
+.maroon{
+	background:#F6CFA1;
+}
+.pink{
+	background:#FFC0C0;
+}
+.gray{
+	background:#CCCCCC;
+}
+.m_green{
+	background:#CCCC99;
+}
+.yellow{
+	background:#FFFF99;
+}
+
+.c_gray{
+	background:#EEEEEE;
+}
+.c_pink{
+	background:#FFBFFF;
+}
+.fushia{
+	background:#FF99CC;
+}
+.pos_bot{
+	position:absolute;
+	bottom:0;
+	margin:0;
+	left:0;
+}
+.pos_top{
+	position:absolute;
+	top:0;
+	right:0;
+	margin:0;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Balloon</title>
+	<style>
+	#ballon{
+		width:200px;
+		height:200px;
+		background-color:red;
+		border-radius: 50%;
+	}
+	</style>
+</head>
+<body>
+	<div id="ballon" onclick="modifyClick('ballon')" onmouseleave="modifyLeave('ballon')">
+	</div>
+	<script>
+		function modifyClick(cible) {
+			var color = document.getElementById(cible).style.backgroundColor;
+			switch (color)
+			{
+				case("red" || ""):
+					document.getElementById(cible).style.backgroundColor = "green";
+					break;
+				case("green"):
+					document.getElementById(cible).style.backgroundColor = "blue";
+					break;
+				case("blue"):
+					document.getElementById(cible).style.backgroundColor
+					 = "red";
+					break;
+					default:
+					document.getElementById(cible).style.backgroundColor = "green";
+					break;
+			}
+			var taille = document.getElementById(cible).offsetHeight + 10; console.log(taille);
+			if (taille > 420)
+				taille = 200;
+			document.getElementById(cible).style.width = taille + "px";
+			document.getElementById(cible).style.height = taille + "px"
+	};
+	function modifyLeave(cible){
+		var color = document.getElementById(cible).style.backgroundColor;
+			switch (color)
+			{
+				case("red"):
+					document.getElementById(cible).style.backgroundColor = "blue";
+					break;
+				case("blue"):
+					document.getElementById(cible).style.backgroundColor = "green";
+					break;
+				case("green"):
+					document.getElementById(cible).style.backgroundColor
+					 = "red";
+					break;
+				default:
+					document.getElementById(cible).style.backgroundColor = "blue";
+					break;
+			}
+			var taille = document.getElementById(cible).offsetHeight - 5; console.log(taille);
+			if (taille < 200)
+				taille = 200;
+			document.getElementById(cible).style.width = taille + "px";
+			document.getElementById(cible).style.height = taille + "px";
+	}
+	</script>
+</body>
+</html>

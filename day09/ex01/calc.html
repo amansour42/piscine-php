@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calc</title>
+	<style>
+	</style>
+</head>
+<body>
+	<form name="calc">
+	First number: <input type="text" name="nbg" id="nbg">
+	<br>
+	<select name='list'>
+  		<option value="+">+</option>
+  		<option value="-">-</option>
+  		<option value="*">*</option>
+  		<option value="/">/</option>
+  		<option value="%">%</option>
+	</select>
+	<br>
+	Second number: <input type="text" name="nbd" id="nbd">
+	<br>
+	<input type="submit" name= "submit" value="Try me!" onclick="result()">
+	</form>
+	<script type="text/javascript">
+		setInterval("alert('Please, use me...')", 30000);
+		function result(){
+			var nb_d = document.calc.nbd.value;
+			var nb_g = document.calc.nbg.value;
+			if (nb_d == "" || nb_g == "")
+			{
+				alert("Error :(");
+				return ;
+			}
+			nb_d = parseInt(document.calc.nbd.value);
+			nb_g = parseInt(document.calc.nbg.value);
+			if (nb_g < 0 || nb_d < 0)
+			{
+				alert("Error :(");
+				return ;
+			}
+			op = document.calc.list.options[document.calc.list.selectedIndex].value;
+			if (op == "+")
+			{
+				alert(nb_g + nb_d);
+				console.log(nb_g + nb_d);
+			}
+			else if (op == "-")
+			{
+				alert(nb_g - nb_d);
+				console.log(nb_g - nb_d);
+			}
+			else if (op == "*")
+			{
+				alert(nb_g * nb_d);
+				console.log(nb_g * nb_d);
+			}
+			else if (op == "%")
+			{
+				if (nb_d == 0)
+					alert("It’s over 9000!");
+				else
+				{
+					alert(nb_g % nb_d);
+					console.log(nb_g % nb_d);
+				}
+			}
+			else
+			{
+				if (nb_d == 0)
+					alert("It’s over 9000!");
+				else
+				{
+					alert(nb_g / nb_d);
+					console.log(nb_g / nb_d);
+				}
+			}
+		}
+	</script>
+</body>
+</html>
